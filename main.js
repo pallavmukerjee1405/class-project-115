@@ -23,8 +23,8 @@ function modelLoaded(){
 function gotPoses(results){
     if(results.length>0){
         console.log(results);
-        noseX=results[0].pose.nose.x-5;
-        noseY=results[0].pose.nose.y-5;
+        noseX=results[0].pose.nose.x-7;
+        noseY=results[0].pose.nose.y-7;
         console.log("nose x ="+noseX);
         console.log("nose y ="+noseY);
     }
@@ -32,10 +32,7 @@ function gotPoses(results){
 
 function draw(){
     image(video,0,0,300,300);
-    fill(255,0,0);
-    stroke(255,0,0);
-    circle(noseX,noseY,20);
-    image(clown_nose_img,noseX,noseY,30,30);
+    image(clown_nose_img,noseX,noseY,60,60);
 }
 
 function take_snapshot(){
